@@ -1,7 +1,11 @@
-import redisClient from '../../../src/common/utils/redis';
+import redisClient, { redisInstance } from '../../../src/common/utils/redis';
 
 beforeEach(() => {
   jest.resetModules();
+});
+
+afterEach(async () => {
+  await redisInstance.flushall();
 });
 
 describe('Redis', () => {
