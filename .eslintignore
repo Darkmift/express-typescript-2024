@@ -4,3 +4,4 @@ package-lock.json
 package.json
 coverage
 docker-config
+jest.setup.redis-mock.js
